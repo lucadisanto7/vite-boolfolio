@@ -9,7 +9,7 @@ export default {
   methods:{
     getAllProjects(){
       axios.get('http://127.0.0.1:8000/api/projects').then((see) =>{
-        console.log(see.data)
+        this.projects = see.data.results;
       });
     }
   },
@@ -25,7 +25,17 @@ export default {
           <h1 class="text-center"> Elenco progetti</h1>
         </div>
         <div class="col-12">
-
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <img class="card-img-top" src="">
+                <div class="card-body">
+                  <h4 class="card-title">Titolo</h4>
+                  <p>lorem ipsum</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   </div>
