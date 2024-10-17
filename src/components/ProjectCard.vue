@@ -12,6 +12,7 @@ export default {
           <img class="card-img-top" :src="project.image != null ? `http://127.0.0.1:8000/storage/${project.image}` : 'https://placehold.co/600x400?text=Immagine+copertina'">
           <div class="card-body">
             <h4 class="card-title">{{project.name}}</h4>
+            <p><strong>Tipoogia</strong>{{ $project->type ? project->type->name: 'Tipologia non definita'}}</p>
             <p>{{project.summary}}</p>
           </div>
         </div>
