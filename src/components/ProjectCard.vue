@@ -18,7 +18,7 @@ export default {
           <div class="card-body">
             <h4 class="card-title">{{project.name}}</h4>
             <p><strong>Tipoogia</strong>{{ $project.type ? project.type.name: 'Tipologia non definita'}}</p>
-            <ul class="list-unstyled d-flex" v-if="project.technologies">
+            <ul class="list-unstyled d-flex" v-if="project.technologies.lenght > 0">
                 <li v-for="tech in project.technologies" :key="tech.id">
                     {{ tech.name}}
                 <li>
