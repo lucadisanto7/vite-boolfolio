@@ -3,6 +3,11 @@ export default {
     name:'ProjectCard',
     props:{
         project: Object
+    },
+    methods:{
+        truncateText(text){
+            return text.substr(0, 50) + '...';
+        }
     }
 }
 </script>
