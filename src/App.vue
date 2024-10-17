@@ -33,6 +33,17 @@ export default {
             <ProjectCard v-for="proj in projects" :key="proj.id" :project="proj"/>
           </div>
         </div>
+        <div class="col-12">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
   </div>
 </template>
