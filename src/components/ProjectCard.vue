@@ -23,7 +23,7 @@ export default {
                     {{ tech.name}}
                 <li>
             </ul>            
-            <p>{{project.summary}}</p>
+            <p>{{truncateText(project.summary)}}</p>
           </div>
         </div>
       </div>
