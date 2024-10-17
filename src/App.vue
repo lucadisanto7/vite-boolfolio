@@ -44,9 +44,9 @@ export default {
         <div class="col-12">
           <nav aria-label="Page navigation example">
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#" @click="goToPage(i - 1)">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#" @click="goToPage(current_page - 1)">Previous</a></li>
               <li class="page-item" v-for="i in last_page"><a class="page-link" href="#" @click="goToPage(i)">{{i}}</a></li>
-              <li class="page-item"><a class="page-link" href="#" @click="goToPage(i + 1)">Next</a></li>
+              <li class="page-item"><a class="page-link" href="#" @click="goToPage(current_page + 1)">Next</a></li>
             </ul>
           </nav>
         </div>
