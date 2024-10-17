@@ -8,9 +8,13 @@ export default {
   },
   methods:{
     getAllProjects(){
-      axios.get('http://127.0.0.1:8000/api/projects')
-
+      axios.get('http://127.0.0.1:8000/api/projects').then((see) =>{
+        console.log(see.data)
+      });
     }
+  },
+  created(){
+    this.getAllProjects();
   }
 }
 </script>
