@@ -7,7 +7,9 @@ export default {
   },
   data(){
     return{
-      projects:[]
+      projects:[],
+      last_page: null,
+      current_page: null,
     }
   },
   methods:{
