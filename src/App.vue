@@ -13,7 +13,7 @@ export default {
   methods:{
     getAllProjects(){
       axios.get('http://127.0.0.1:8000/api/projects').then((see) =>{
-        this.projects = see.data.results;
+        this.projects = see.data.results.data;
       });
     }
   },
