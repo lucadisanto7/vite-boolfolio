@@ -1,6 +1,9 @@
 <script>
 export default {
-    name:'ProjectCard'
+    name:'ProjectCard',
+    props:{
+        project: Object
+    }
 }
 </script>
 <template lang="">
