@@ -17,8 +17,14 @@ export default {
         this.last_page = see.data.results.last_page;
         this.current_page = see.data.results.current_page;
       });
-    }
-  },
+    },
+    goToPage(page){
+      axios.get('http://127.0.0.1:8000/api/projects?page='+page).then((see) =>{
+        this.projects = see.data.results.data;
+        this.current_page = see.data.results.current_page;
+        });
+      }
+    },
   created(){
     this.getAllProjects();
   }
