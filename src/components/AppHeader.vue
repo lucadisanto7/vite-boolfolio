@@ -12,7 +12,7 @@ export default {
                         <router-link :to="{ name:'homepage' }" href="#">Home</router-link>
                     </li>   
                     <li class="me=2">
-                        <router-link :to="{ name:'homepage' }" href="#">Portfolio</router-link>
+                        <router-link :to="{ name:'portfolio' }" href="#">Portfolio</router-link>
                     </li>     
                 </ul>
             </div>
