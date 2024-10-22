@@ -4,6 +4,15 @@ export default {
         return{
 
         }
+    },
+    methods:{
+        getProject(){
+            axios.get('INDIRIZZO').then((res)=>{
+                if(res.data.success){
+                this.project = res.data.result
+                }
+            });
+        }
     }
 }
 </script>
