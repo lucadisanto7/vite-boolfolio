@@ -15,4 +15,5 @@ export const store = reactive({
             label: 'contacts',
         }
     ]
+    
 });
