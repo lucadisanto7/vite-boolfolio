@@ -11,7 +11,7 @@ export default {
     },
     methods:{
         getProject(){
-            axios.get('INDIRIZZO').then((res)=>{
+            axios.get(`${store.baseUrl}/projects/${this.$route.params.slug}`).then((res)=>{
                 if(res.data.success){
                 this.project = res.data.result
                 }
