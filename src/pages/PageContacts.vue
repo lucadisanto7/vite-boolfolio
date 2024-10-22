@@ -2,7 +2,36 @@
 import {store} from '../store.js';
 import axios from axios;
 export default {
-
+data(){
+    return{
+        name:'',
+        surname:'',
+        email:'',
+        phone:'',
+        content:'',
+    }
+},
+methods: {
+    sendForm(){
+        const data = {
+        name: this.name,
+        surname: this.surname,
+        email: this.email,
+        phone: this.phone,
+        content: this.content,
+        }
+        axios.post(`${store.baseUrl}/contacts`, data).then((res) => {
+            if(res.data.success){
+                this.name = '';
+                this.surname = '';
+                this.email = '';
+                this.phone = '';
+                this.content = '';
+            }
+        }
+    );
+    }
+}
 }
 </script>
 <template>
