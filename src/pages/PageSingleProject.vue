@@ -13,10 +13,13 @@ export default {
         getProject(){
             axios.get(`${store.baseUrl}/projects/${this.$route.params.slug}`).then((res)=>{
                 if(res.data.success){
-                this.project = res.data.result
+                this.project = res.data.results
                 }
             });
         }
+    },
+    created(){
+        this.getProject()
     }
 }
 </script>
