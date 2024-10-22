@@ -26,13 +26,13 @@ export default {
 <template>
     <div>
         <div class="container">
-            <div class="row">
+            <div class="row my-5">
                 <div class="col-12 col-md-6 col-lg-4">
                     <img class="img-fluid" :src="project.image !=null ? `http://127.0.0.1:8000/storage/${project.image}`: 'https://placehold.co/600x400?text=Immagine+copertina'" />
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="content">
-                        <h1>Titolo</h1>
+                        <h1>{{project.name}}</h1>
                         <p><strong>Tipologia:</strong> {{project.type != null ? project.type.name : 'nessuna tipologia'}}</p>
                         <p v-if="project.technologies.lenght > 0">
                             <strong>Tecnologie:</strong> 
@@ -50,5 +50,7 @@ export default {
     </div>
 </template>
 <style lang="">
-    
+    .content{
+        margin-top: 30px;
+    }
 </style>
