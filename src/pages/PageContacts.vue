@@ -1,6 +1,8 @@
 <script>
+import {store} from '../store.js';
+import axios from axios;
 export default {
-    
+
 }
 </script>
 <template>
