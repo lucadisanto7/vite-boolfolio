@@ -24,6 +24,7 @@ export default {
                 <li>
             </ul>            
             <p>{{truncateText(project.summary)}}</p>
+            <router-link class="btn btn-sm btn-primary" :to="{ name: 'single-project', params: { slug: project.slug} }">Dettagli progetto</router-link>
           </div>
         </div>
       </div>
